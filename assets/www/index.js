@@ -10,3 +10,12 @@ $( document ).bind( "mobileinit", function() {
     $.mobile.allowCrossDomainPages = true;
 	$.support.cors = true;
 });
+document.addEventListener("backbutton", function(e){
+    if($.mobile.activePage.is('#page-home')){
+        e.preventDefault();
+        navigator.app.exitApp();
+    }
+    else {
+        navigator.app.backHistory()
+    }
+}, false);
