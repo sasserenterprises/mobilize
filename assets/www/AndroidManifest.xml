@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.mdsdemo.phonegapapijqm"
+    package="com.webileapps.urltochildbrowser"
     android:versionCode="1"
     android:versionName="1.0" >
 
 
-    <uses-sdk android:minSdkVersion="7" />
+    <uses-sdk android:minSdkVersion="8" android:targetSdkVersion="15" />
 
 
     <supports-screens
@@ -34,7 +34,7 @@
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.GET_ACCOUNTS" />
     <uses-permission android:name="android.permission.BROADCAST_STICKY" />
-
+	<uses-permission android:name="android.permission.READ_PHONE_STATE" />
 
     <uses-feature android:name="android.hardware.camera" />
     <uses-feature android:name="android.hardware.camera.autofocus" />
@@ -42,8 +42,8 @@
 
     <application android:debuggable="true" android:icon="@drawable/ic_launcher"
         android:label="@string/app_name" >
-        <activity android:configChanges="orientation|keyboardHidden" android:label="@string/app_name"
-            android:name=".PhonegapapijqmActivity" >
+        <activity android:configChanges="orientation|screenSize" android:label="@string/app_name"
+            android:name=".MainActivity" >
             <intent-filter >
                 <action android:name="android.intent.action.MAIN" />
 
